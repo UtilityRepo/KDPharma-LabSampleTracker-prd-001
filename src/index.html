@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App - KD Pharma Group</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevent scrolling */
+        } 
+        iframe {
+            height: 100%;
+            width: 100%;
+            border: none; /* Remove border */
+        }
+    </style>
+</head>
+<body>
+    <iframe id="powerAppsIframe" referrerpolicy="no-referrer" loading="lazy" allow="geolocation 'none'; microphone 'none'; camera 'none'; encrypted-media 'none';"></iframe>
+    <script>
+        function getQueryParam(param) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
+
+        function setIframeSrc() {
+            const screen = getQueryParam('screen');
+            const baseUrl = 'https://apps.powerapps.com/play/e/2ece6c05-db92-ee31-8647-bf2b1c4e2d42/a/189e1c48-91a8-4d1c-8968-f6ab875bc08b?tenantId=14327214-edbc-4481-90b6-267bbb85dbba&hint=7c6c86a1-9e15-4faa-ad38-319a26d8b6a9&sourcetime=1766416906164&hidenavbar=true';
+            const iframe = document.getElementById('powerAppsIframe');
+            if (screen) {
+                iframe.src = `${baseUrl}&screen=${encodeURIComponent(screen)}`;
+            } else {
+                iframe.src = baseUrl;
+            }
+        }
+
+        // Set the iframe source when the page loads
+        window.onload = setIframeSrc;
+    </script>
+</body>
+</html>
