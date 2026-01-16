@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel App - KD Pharma Group</title>
+    <title>Lab Sample Tracker</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         html, body {
@@ -29,7 +29,7 @@
 
         function setIframeSrc() {
             const screen = getQueryParam('screen');
-            const baseUrl = 'https://apps.powerapps.com/play/e/2ece6c05-db92-ee31-8647-bf2b1c4e2d42/a/189e1c48-91a8-4d1c-8968-f6ab875bc08b?tenantId=14327214-edbc-4481-90b6-267bbb85dbba&hint=7c6c86a1-9e15-4faa-ad38-319a26d8b6a9&sourcetime=1766416906164&hidenavbar=true';
+            const baseUrl = 'https://apps.powerapps.com/play/e/ab86e476-779e-ec01-93fb-9306c31e2853/a/047531fe-6511-4c80-ab22-923572519388?tenantId=14327214-edbc-4481-90b6-267bbb85dbba&hint=78b167c7-1535-46a8-b13a-1d4c59e52ca3&sourcetime=1768561002291&hidenavbar=true';
             const iframe = document.getElementById('powerAppsIframe');
             if (screen) {
                 iframe.src = `${baseUrl}&screen=${encodeURIComponent(screen)}`;
